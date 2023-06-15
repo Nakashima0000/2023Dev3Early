@@ -6,11 +6,8 @@
         <!--ブートストラップが使えるようになる-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <!--CSSとリンクさせる-->
-        <link href="投稿画面.css" rel="stylesheet" type="text/css">
+        <link href="./main.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <!-- dropzone.js 画像ファイルアップロードするため -->
-        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
         <!-- JSの読み込み -->
         <script src="" defer></script>
     </head>
@@ -22,21 +19,7 @@
         <!-- -->
         <!-- ここに中身を入れる -->
         <div class="main">
-            <div class="post_btn">
-                <button type="button" class="post_button">投稿</button>
-            </div>
-            <div class="post_sel_img">
-                <form action="投稿画面.php" class="dropzone" id="my-awesome-dropzone">
-                    <div class="dz-default dz-message" >
-                    <button class="dz-button" type="button" style="font-size:40px;color:gray;">
-                        ファイルをドラッグ＆ドロップ<br>してしてください。<br>またはここをクリック(タップ)して<br>画像選択してください。
-                    </button>
-                    </div>
-                </form>
-            </div>
-            <div class="text_area">
-                <textarea name="kansou" rows="10" maxlength="300" placeholder="キャプションを入力..."></textarea>
-            </div>
+        
         </div>
         <!--ここまで-->
         <!-- footer部分 -->

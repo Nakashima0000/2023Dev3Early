@@ -1,0 +1,260 @@
+.logo_img_div {
+    background-color:white;
+    border-bottom:0.5px solid gray;
+    margin:0;
+    padding:0;
+    height:7vh;
+    width:100%;
+
+    z-index:1000;
+    display: flex;
+    flex-flow:wrap;
+    position:fixed;
+    align-items: center;
+    top:0;
+}
+
+.logo_img {
+    height:5vh;
+    position:fixed;
+    left:2%;
+}
+
+.main {
+    height:calc(100vh - 14vh);
+    width:100%;
+    background-color:white;
+    margin:7vh 0 7vh 0;
+}
+
+.post_btn {
+    height:8vh;
+    width:100vw;
+    text-align:right;
+}
+
+.post_button {
+    appearance: none;
+    border:0;
+    text-decoration:underline;
+    background-color:white;
+    color:rgb(0, 166, 255);
+    font-size:50px;
+    padding:2vh;
+}
+
+.post_sel_img {
+    height:30vh;
+    width:100vw;
+    /*margin:0 calc((100vw - 30vh)/2);
+    /*margin-bottom:8vh;*/
+    /*border: 5px dashed gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;*/
+}
+
+#not_img {
+    display: none;
+}
+
+.sel_img2 {
+    height:60vw;
+    width:60vw;
+    margin:0 20vw;
+    /*margin-bottom:8vh;*/
+    border: 5px dashed gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sel_img2 p {
+    font-size: 40px;
+    color:gray;
+    position: fixed;
+}
+
+/*.post_sel_img img {
+    height:30vh;
+    width:30vh;
+    position: fixed;
+    display: none;
+}*/
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+ }
+
+ .slider {
+    display:none;
+  }
+  .slider.slick-initialized {
+    display: block;
+  }
+ 
+ .slider .image {
+    width:60vw;/*スライダー内の画像を横幅60%に*/
+    height:60vw;/*正方形にする*/
+    object-fit: cover;/*画像の引き伸びを抑える*/
+ }
+
+
+ /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+ 
+ .slider .slick-slide {
+    transform: scale(0.8);/*左右の画像のサイズを80%に*/
+    transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5;/*透過50%*/
+    /*margin:0 10px;*/
+ }
+ 
+ .slider .slick-slide.slick-center{
+    transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+    opacity: 1;/*透過なし*/
+ }
+ 
+ /*矢印の設定*/
+ 
+
+
+ /*戻る、次へ矢印の位置*/
+ .slick-prev, 
+ .slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 5px solid black;/*矢印の色*/
+    border-right: 5px solid black;/*矢印の色*/
+    height: 90px;
+    width: 90px;
+ }
+ 
+ .slick-prev {/*戻る矢印の位置と形状*/
+    left: 3%;
+    transform: rotate(-135deg);
+    z-index: 1;
+ }
+ 
+ .slick-next {/*次へ矢印の位置と形状*/
+    right: 3%;
+    transform: rotate(45deg);
+ }
+ 
+ .slick-disabled {
+    opacity: 0!important;
+}
+
+ /*ドットナビゲーションの設定*/
+ 
+ .slick-dots {
+    text-align:center;
+    margin:30px 0 0 0;
+ }
+ 
+ .slick-dots li {
+    display:inline-block;
+    margin:0 5px;
+ }
+ 
+ .slick-dots button {
+    color: transparent;
+    outline: none;
+    width:24px;/*ドットボタンのサイズ*/
+    height:24px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+ }
+ 
+ .slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+ }
+
+ .slick-dots > li:only-child {
+    display: none;/*１枚だけの時は非表示にする*/
+}
+ 
+ 
+ /*========= レイアウトのためのCSS ===============*/
+ 
+ ul{
+   margin:0;
+   padding: 0;
+   list-style: none;
+ }
+ 
+ /*-------------------*/
+
+.post_sel {
+    height:10vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.sel {
+    height:6vh;
+    width:10vh;
+    margin:2vh 5vw;
+    border-radius: 10%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sel p {
+    font-size: 70px;
+    color: gray;
+}
+
+.up_sel {
+    display: none;
+}
+
+.text_area {
+    height:30vh;
+    width:100vw;
+    font-size:36px;
+    margin:0 0 8vh 0;
+    text-align:center;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+}
+
+textarea {
+    height:30vh;
+    width:100vw;
+    background-color:white;
+    /*border-radius:20px;
+    border:5px solid black;*/
+    border:none;
+    padding:30px;
+    outline: none;
+}
+
+.footer {
+    background-color:white;
+    border-top:0.5px solid gray;
+    z-index:1000;
+    display: flex;
+    flex-flow:wrap;
+    max-height:200px;
+    min-height:150px;
+    height:7vh;
+    width:100%;
+
+    position:fixed;
+    bottom:0;
+
+    justify-content: space-around;
+    align-items: center;
+}
+

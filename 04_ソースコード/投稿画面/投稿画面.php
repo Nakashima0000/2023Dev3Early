@@ -6,10 +6,18 @@
         <!--ブートストラップが使えるようになる-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <!--CSSとリンクさせる-->
-        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="../css/投稿画面.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- dropzone.js 画像ファイルアップロードするため -->
+        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
         <!-- JSの読み込み -->
-        <script src="" defer></script>
+        <script src="../js/投稿画面.js" defer></script>
+        <!-- スライド機能-->
+        <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
     <body>
         <!-- logo画像 -->
@@ -19,6 +27,32 @@
         <!-- -->
         <!-- ここに中身を入れる -->
         <div class="main">
+            <div class="post_btn">
+                <button type="button" class="post_button">投稿</button>
+            </div>
+            <div class="post_sel_img">
+                <!--<p>画像を選択してください</p>
+                <img src="">-->
+                <div id="not_img"><div class="sel_img2"><p>画像を選択してください</p></div></div>
+                <ul class="slider" id="target">
+                    <!--<li><img src="../img/000018.JPG" alt="" class="image"></li>
+                    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_02.jpg" alt="" class="image"></li>
+                    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_03.jpg" alt="" class="image"></li>
+                    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_04.jpg" alt="" class="image"></li>
+                    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_05.jpg" alt="" class="image"></li>
+                    <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_06.jpg" alt="" class="image"></li>
+                    -->
+                </ul>
+            </div>
+            <div class="post_sel">
+                <label class="sel">
+                    <p>＋</p>
+                    <input type="file" name="logo" id="form" class="up_sel" accept=".jpg, .jpeg, .png, .gif">
+                </label>
+            </div>
+            <div class="text_area">
+                <textarea name="kansou" rows="10" maxlength="300" placeholder="キャプションを入力..."></textarea>
+            </div>
         </div>
         <!--ここまで-->
         <!-- footer部分 -->
