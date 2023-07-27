@@ -38,35 +38,37 @@ body {
 }
 
 .main {
-    height:calc(100vh - 14vh);
+    /*height:calc(100vh - 36vh);*/
+    height:auto;
     width:100vw;
     background-color:white;
-    margin:7vh 0 7vh 0;
-    padding:0;
+    margin:7vh 0 0 0;
+    padding-bottom:7vh;
     display: flex;
+    flex-wrap: wrap;
     /*display: none;*/
     position:absolute;
 }
 
 .icon {
-    height:14vh;
+    height:auto;
     width:100%;
     background-color: white;
     display: flex;
-    position: fixed;
-    border-bottom:0.5px solid gray;
-    z-index: 1000;
+    flex-wrap: wrap;
+    z-index: 900;
 }
 
 .logo {
     height:10vh;
     width:10vh;
     border-radius:50%;
-    margin:2vh 3vh;
+    margin:2vh 3vh auto 3vh;
+    object-fit: cover;
 }
 
 .my_p_div {
-    height:14vh;
+    height:auto;
     width:calc(100% - 16vh);
     margin:0;
     padding:0;
@@ -74,31 +76,76 @@ body {
 
 .name_p {
     height:5vh;
-    width:100%;
-    margin:1vh;
+    width:auto;
+    margin:1vh 0 0 1vh;
     font-size:50px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
+}
+
+.my_p_intro {
+    width:auto;
+    max-width: 100%;
+    margin-bottom:1vh;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.my_p_check {
+    display: none;
 }
 
 .my_p {
-    height:7vh;
-    width:100%;
+    height:auto;
+    min-height: 7vh;
     margin:0;
     padding:0 1vh;
     font-size:35px;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.my_p::before {
+    display: block;
+    position: absolute;
+    bottom:0;
+    right:30%;
+    width:70%;
+    content:"";
+}
+
+.tuduki {
+    position: absolute;
+    bottom: 0;
+    right: 1.5vh;
+    height:58px;
+    font-size:35px;
+    line-height: 1.5;
+}
+
+.tuduki::before {
+    vertical-align: sub; 
+    content:"... 続きを読む";
+    color:rgb(156, 156, 156);
+}
+
+.my_p_check:checked ~ .tuduki::before {
+    content:"閉じる";
+}
+
+.my_p_check:checked ~ .my_p::before {
+    display: none;
 }
 
 .profile {
     height:8vh;
     width:100%;
     background-color: white;
-    position:fixed;
-    display:flex;
-    top:21vh;
+    display: flex;
+    border-top:0.5px solid gray;
     border-bottom:0.5px solid gray;
-    z-index:1000;
+    z-index:900;
 }
 
 .profile1 {
@@ -147,8 +194,6 @@ body {
 }
 
 .post_main {
-    position:absolute;
-    top:22vh;
     width:100%;
     padding:0;
     margin:0;
@@ -269,6 +314,7 @@ li::before {
     height:13vh;
     width:13vh;
     border-radius:50%;
+    object-fit: cover;
 }
 
 .txt_mdl {

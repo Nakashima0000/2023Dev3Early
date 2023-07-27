@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+body {
+    height:100vh;
+    width:calc((100vh*9)/19.5);
+    max-width: 1000px;
+    background-color:white;
+    /*border: 1px solid black;*/
+}
+
+.main {
+    height:100%;
+    width:100%;
+}
+
+.header {
+    height:6vh;
+    width:100%;
+    background-color: white;
+    border-bottom:0.5px solid gray;
+    z-index:1000;
+    display: flex;
+    flex-flow:wrap;
+    position:fixed;
+    align-items: center;
+    top:0;
+}
+
+.back_icon {
+    height:100%;
+    width:6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back_btn{
+    text-decoration: none;
+    color: #000000; 
+}
+.msg_name {
+    height:100%;
+    width:calc(100vw - 6vh);
+    display: flex;
+    align-items: center;
+}
+
+.msg_name p {
+    font-size:50px;
+    height:4vh;
+    width:90%;
+    margin:0;
+}
+
+.message {
+    height:100vh;
+    width:100%;
+    padding:6vh 0 7vh 0;
+}
+
+.msg_left, .msg_right {
+    width:90%;
+    display: flex;
+    padding:1.5vh;
+}
+
+.msg_right {
+    margin:0 0 0 auto;
+    justify-content: end;
+}
+
+.left_icon {
+    height: 5vh;
+    width:5vh;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.left_msg, .right_msg {
+    font-size: 40px;
+    background-color: gainsboro;
+    border-radius: 40px;
+    padding:1vh 2vh;
+    margin:0 1vh;
+    word-break:break-word;
+}
+
+.right_msg {
+    background-color: dodgerblue;
+    color:white;
+    margin:0 0 0 1vh;
+}
+
+.left_time, .right_time {
+    font-size: 30px;
+    margin:auto 0 0 0;
+}
+
+.footer {
+    height:7vh;
+    width:100%;
+    background-color: white;
+    border-top:0.5px solid gray;
+    z-index:1000;
+    display: flex;
+    flex-flow:wrap;
+    position:fixed;
+    align-items: center;
+    bottom:0;
+}
+
+.img_icon {
+    height:100%;
+    width:7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_box {
+    height:100%;
+    width:calc(100vw - 7vh - 7vh);
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+}
+
+.txt {
+    height:4vh;
+    width:100%;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding:10px 20px;
+}
+
+.txt:focus {
+    outline:black 2px solid;
+}
+
+.txt::placeholder {
+    color:#ccc;
+}
+
+.msg_btn {
+    height:100%;
+    width:7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_sub {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin:0;
+    font-size: 40px;
+    font-weight: bold;
+    color:dodgerblue;
+    background-color: white;
+}
+
+.btn_sub:active {
+    color:blue;
+}

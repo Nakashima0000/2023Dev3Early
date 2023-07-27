@@ -1,20 +1,22 @@
 //画像アップロードのプレビュー
-$('#form').on('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = async function (e) {
-        $('.slider').slick('slickAdd','<li><img src="' + e.target.result + '" alt="" class="image"></li>');
-        imageCheck();
-        const sleep = (second) => new Promise(resolve => setTimeout(resolve, second * 1000));
-        await sleep(0.5);
-        //alert($('.slider').slick('getDotCount') + 1);
-        var cnt = $('.slider').slick('getDotCount');
-        //await sleep(0.5);
-        //alert(cnt);
-        //await sleep(0.5);
-        //$('slider').slick('slickGoTo',cnt,false );
+function selectimg(e) {
+    for (i = 0; i < e.files.length; i++) {
+        var reader = new FileReader();
+        reader.onload = async function (e) {
+            $('.slider').slick('slickAdd','<li><img src="' + e.target.result + '" alt="" class="image"></li>');
+            imageCheck();
+            const sleep = (second) => new Promise(resolve => setTimeout(resolve, second * 1000));
+            await sleep(0.5);
+            //alert($('.slider').slick('getDotCount') + 1);
+            var cnt = $('.slider').slick('getDotCount');
+            //await sleep(0.5);
+            //alert(cnt);
+            //await sleep(0.5);
+            //$('slider').slick('slickGoTo',cnt,false );
+        }
+        reader.readAsDataURL(e.files[i]);
     }
-    reader.readAsDataURL(e.target.files[0]);
-});
+};
 
 
 

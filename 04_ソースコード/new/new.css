@@ -1,0 +1,147 @@
+@media (max-width: 600px) {
+  .con {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*スマホ画面*/
+  }
+
+  .icon {
+    margin-top: 200px;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+  }
+}
+
+button[type="submit"] {
+  width: 98%;
+  margin-top: 100px;
+  /* 登録ボタンを少し下にずらす */
+}
+
+body {
+  margin: auto;
+  height: 80vh;
+  width: 100%;
+  margin-top: 3vh;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+}
+
+.con {
+  height: 80vh;
+  margin: 0 100px;
+  margin-top: 9.4vh;
+}
+
+.image-container {
+  width: 200px;
+  /* 正方形の一辺のサイズを指定 */
+  height: 200px;
+  /* 正方形の一辺のサイズを指定 */
+  overflow: hidden;
+  /* 画像のはみ出し部分を隠す */
+}
+
+.image-container img {
+  width: 200%;
+  /* 画像の幅を親要素に合わせて伸縮 */
+  height: 200%;
+  /* 画像の高さを親要素に合わせて伸縮 */
+  object-fit: cover;
+  /* 画像を親要素に合わせてカバーする */
+}
+
+.logo {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  /* 正方形の一辺のサイズを指定 */
+  height: 400px;
+  /* 正方形の一辺のサイズを指定 */
+  overflow: hidden;
+  /* 画像のはみ出し部分を隠す */
+}
+
+.logo img {
+  width: 400%;
+  /* 画像の幅を親要素に合わせて伸縮 */
+  height: 400%;
+  /* 画像の高さを親要素に合わせて伸縮 */
+  object-fit: cover;
+  /* 画像を親要素に合わせてカバーする */
+}
+
+.input-container {
+  position: relative;
+  margin: auto;
+}
+
+.input-container label {
+  font-size: 200%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #999;
+  transition: all 0.7s ease;
+  pointer-events: none;
+  z-index: 1;
+  background-color: #f2f2f2;
+  padding: 0 5px;
+}
+
+
+
+.input-container input {
+  padding:30px 40px;
+  font-size: 50px;
+  border: 3px solid #ccc;
+  width:780px;
+  margin-top: 0%;
+  background-color: #f2f2f2;
+  box-sizing:border-box;
+  /*テキストボックス*/
+}
+
+
+.input-container input:focus+label,
+.input-container input:valid+label {
+  top: -20px;
+  font-size: 36px;
+  color: #555;
+}
+
+.logo img {
+  width: 400px;
+  height: auto;
+  margin-bottom: 200px;
+}
+
+form input {
+  /*width: 100%;*/
+  padding: 12px;
+  margin-bottom: 50px;
+  border: 1px solid #dbdbdb;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+#btn {
+  width: 780px;
+  padding: 40px;
+  background-color: #2094ff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 40px;
+  cursor: pointer;
+  /*登録するボタン*/
+}
